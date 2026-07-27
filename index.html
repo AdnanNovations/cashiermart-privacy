@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi — Cashier Mart</title>
+<style>
+  :root {
+    --ink: #1c2430;
+    --muted: #66707d;
+    --line: #e2e6ea;
+    --navy: #1a3a6b;
+    --orange: #f57c1f;
+    --soft: #f7f8fa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    margin: 0 auto;
+    padding: 32px 22px 60px;
+    max-width: 780px;
+    font-size: 15px;
+    line-height: 1.65;
+    background: #fff;
+  }
+  header { border-bottom: 3px solid var(--navy); padding-bottom: 16px; margin-bottom: 8px; }
+  h1 { font-size: 24px; margin: 0 0 6px; color: var(--navy); }
+  .meta { color: var(--muted); font-size: 13px; }
+  h2 {
+    font-size: 17px; margin: 30px 0 10px; color: var(--navy);
+    border-left: 4px solid var(--orange); padding-left: 10px;
+  }
+  h3 { font-size: 15px; margin: 18px 0 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td { padding: 9px 11px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 14px; }
+  th { background: var(--soft); font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); }
+  .callout {
+    background: #eef6ee; border: 1px solid #cfe3cf; border-radius: 8px;
+    padding: 14px 16px; margin: 16px 0;
+  }
+  .callout strong { color: #256029; }
+  .warn { background: #fff6e8; border-color: #f0d9b0; }
+  .warn strong { color: #8a5a00; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 5px; }
+  footer { margin-top: 40px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  code { background: var(--soft); padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  @media print {
+    body { padding: 0; font-size: 12px; }
+    @page { margin: 14mm; size: A4; }
+    h2 { page-break-after: avoid; }
+    table, .callout { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Kebijakan Privasi — Cashier Mart</h1>
+  <div class="meta">
+    Aplikasi Kasir &amp; Manajemen Stok &middot; Paket aplikasi: <code>com.cashiermart.app</code><br>
+    Berlaku sejak: 27 Juli 2026 &middot; Versi dokumen 1.0
+  </div>
+</header>
+
+<div class="callout">
+  <strong>Ringkasnya:</strong> Cashier Mart menyimpan seluruh data penjualan, produk, dan
+  foto Anda <strong>hanya di dalam HP Anda sendiri</strong>. Kami tidak memiliki server,
+  tidak mengumpulkan data Anda, dan tidak mengirimkannya ke mana pun. Tidak ada iklan,
+  tidak ada pelacakan, dan tidak ada analitik.
+</div>
+
+<h2>1. Siapa Kami</h2>
+<p>
+  Aplikasi Cashier Mart dikembangkan dan didistribusikan oleh <strong>AdnanNovations</strong>.
+  Dokumen ini menjelaskan bagaimana aplikasi memperlakukan data Anda.
+</p>
+
+<h2>2. Data yang Disimpan di Perangkat Anda</h2>
+<p>
+  Seluruh data di bawah ini disimpan di dalam penyimpanan internal HP Anda dan
+  <strong>tidak pernah dikirim ke pengembang maupun pihak ketiga mana pun</strong>.
+</p>
+
+<table>
+  <thead>
+    <tr><th>Jenis Data</th><th>Isinya</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Akun pengguna</td>
+      <td>Nama lengkap, nama pengguna, peran (kasir/admin/pemilik), dan kata sandi.
+          Kata sandi <strong>tidak pernah disimpan dalam bentuk asli</strong> — hanya
+          disimpan hasil pengacakannya (SHA-256 dengan <em>salt</em> acak), sehingga tidak
+          dapat dibaca kembali oleh siapa pun, termasuk pengembang.</td>
+    </tr>
+    <tr>
+      <td>Produk</td>
+      <td>Nama, harga jual, harga modal, stok, barcode, dan foto produk.</td>
+    </tr>
+    <tr>
+      <td>Transaksi</td>
+      <td>Daftar barang terjual, jumlah, total, metode pembayaran, nama kasir, waktu
+          transaksi, catatan pembatalan, dan foto bukti pembayaran (jika diunggah).</td>
+    </tr>
+    <tr>
+      <td>Penyesuaian stok</td>
+      <td>Riwayat perubahan stok beserta alasan dan pelakunya.</td>
+    </tr>
+    <tr>
+      <td>Metode pembayaran</td>
+      <td>Nama metode dan gambar QRIS milik toko Anda (jika ditambahkan).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. Izin yang Diminta dan Alasannya</h2>
+<table>
+  <thead>
+    <tr><th>Izin</th><th>Dipakai untuk</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Kamera</strong></td>
+      <td>Memotret produk, memindai barcode, dan mengambil foto bukti pembayaran.
+          Pemindaian barcode diproses <strong>sepenuhnya di dalam HP</strong> dan gambar
+          kamera tidak dikirim ke mana pun.</td>
+    </tr>
+    <tr>
+      <td><strong>Foto &amp; media</strong></td>
+      <td>Memilih foto produk dari galeri, dan menyimpan berkas cadangan (backup)
+          ke folder Download.</td>
+    </tr>
+    <tr>
+      <td><strong>Bluetooth</strong></td>
+      <td>Menghubungkan ke printer struk thermal. Tidak dipakai untuk pelacakan lokasi.</td>
+    </tr>
+    <tr>
+      <td><strong>Internet</strong></td>
+      <td>Digunakan <strong>hanya</strong> oleh sistem pembayaran Google Play untuk
+          memproses dan memeriksa status langganan. Aplikasi ini sendiri tidak melakukan
+          panggilan jaringan apa pun dan tetap berfungsi penuh tanpa koneksi internet.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>4. Informasi Perangkat</h2>
+<p>
+  Aplikasi membaca <strong>nomor versi Android</strong> perangkat Anda semata-mata untuk
+  menentukan cara yang tepat dalam menyimpan berkas cadangan (aturan penyimpanan berbeda
+  antara Android lama dan baru). Aplikasi <strong>tidak membaca</strong> nomor IMEI, nomor
+  telepon, kontak, lokasi/GPS, daftar aplikasi terpasang, maupun pengenal iklan.
+</p>
+
+<h2>5. Pembayaran Langganan</h2>
+<p>
+  Langganan Cashier Mart diproses sepenuhnya oleh <strong>Google Play Billing</strong>.
+  Aplikasi ini <strong>tidak pernah menerima, melihat, atau menyimpan</strong> nomor kartu,
+  data rekening, atau informasi pembayaran Anda. Yang aplikasi terima dari Google hanyalah
+  jawaban "berlangganan aktif" atau "tidak aktif".
+</p>
+<p>
+  Status langganan tersebut disimpan di HP Anda agar aplikasi tetap dapat dipakai ketika
+  sedang tidak ada koneksi internet. Pembelian dan pembatalan langganan tunduk pada
+  <a href="https://policies.google.com/privacy">Kebijakan Privasi Google</a>.
+</p>
+
+<h2>6. Berkas Cadangan (Backup)</h2>
+<p>
+  Fitur Backup membuat satu berkas <code>.zip</code> berisi seluruh basis data dan foto
+  produk Anda, lalu menyimpannya ke folder <strong>Download</strong> di HP Anda.
+</p>
+<div class="callout warn">
+  <strong>Perhatian:</strong> berkas cadangan berisi data usaha Anda, termasuk riwayat
+  transaksi. Berkas tersebut tetap berada di HP Anda kecuali <strong>Anda sendiri</strong>
+  yang membagikannya (misalnya lewat WhatsApp atau Google Drive). Setelah Anda
+  membagikannya, keamanan berkas itu menjadi tanggung jawab Anda dan tunduk pada kebijakan
+  privasi aplikasi yang Anda gunakan untuk membagikannya. Simpan dan bagikan hanya kepada
+  pihak yang Anda percaya.
+</div>
+<p>
+  Hal yang sama berlaku untuk fitur kirim laporan: laporan hanya dikirim jika Anda menekan
+  tombol bagikan dan memilih sendiri penerimanya.
+</p>
+
+<h2>7. Data Tidak Dibagikan ke Pihak Ketiga</h2>
+<p>Kami menegaskan bahwa aplikasi ini:</p>
+<ul>
+  <li><strong>tidak</strong> memiliki server, sehingga tidak ada data yang bisa dikumpulkan;</li>
+  <li><strong>tidak</strong> menampilkan iklan;</li>
+  <li><strong>tidak</strong> memuat layanan analitik, pelacak, maupun pelaporan kerusakan;</li>
+  <li><strong>tidak</strong> menjual atau membagikan data Anda kepada siapa pun;</li>
+  <li><strong>tidak</strong> mengirim data apa pun secara otomatis di latar belakang.</li>
+</ul>
+
+<h2>8. Keamanan Data</h2>
+<p>
+  Data aplikasi disimpan di area penyimpanan pribadi aplikasi, yang secara sistem Android
+  tidak dapat diakses oleh aplikasi lain. Kata sandi disimpan dalam bentuk teracak dan
+  tidak dapat dikembalikan ke bentuk aslinya.
+</p>
+<p>
+  Karena seluruh data berada di perangkat Anda, keamanannya juga bergantung pada keamanan
+  HP Anda. Kami menyarankan Anda mengunci HP dengan PIN, pola, atau sidik jari, serta
+  berhati-hati saat memberikan akses HP kepada orang lain.
+</p>
+
+<h2>9. Menghapus Data Anda</h2>
+<p>
+  Karena kami tidak menyimpan data Anda, penghapusan sepenuhnya berada di tangan Anda:
+</p>
+<ul>
+  <li>Menghapus (uninstall) aplikasi akan menghapus seluruh data yang tersimpan di dalamnya.</li>
+  <li>Anda juga dapat menghapus data lewat <em>Pengaturan HP → Aplikasi → Cashier Mart →
+      Penyimpanan → Hapus data</em>.</li>
+  <li>Berkas cadangan yang sudah Anda simpan di folder Download perlu dihapus secara
+      terpisah melalui aplikasi pengelola berkas.</li>
+</ul>
+<div class="callout warn">
+  <strong>Tidak dapat dibatalkan:</strong> karena tidak ada salinan di server kami, data
+  yang sudah terhapus <strong>tidak dapat kami pulihkan</strong>. Buat cadangan terlebih
+  dahulu sebelum menghapus aplikasi atau mengganti HP.
+</div>
+
+<h2>10. Penggunaan oleh Anak-anak</h2>
+<p>
+  Cashier Mart adalah aplikasi bisnis yang ditujukan untuk pemilik dan karyawan usaha.
+  Aplikasi ini tidak ditujukan untuk anak-anak dan tidak mengumpulkan data dari anak-anak.
+</p>
+
+<h2>11. Perubahan Kebijakan Ini</h2>
+<p>
+  Kebijakan ini dapat diperbarui bila terdapat perubahan pada fitur aplikasi. Tanggal
+  berlaku di bagian atas halaman akan ikut diperbarui. Perubahan yang bersifat penting akan
+  kami sampaikan melalui keterangan pembaruan aplikasi di Google Play.
+</p>
+
+<h2>12. Hubungi Kami</h2>
+<p>
+  Jika ada pertanyaan mengenai kebijakan privasi ini atau mengenai data Anda, silakan
+  hubungi:
+</p>
+<p>
+  <strong>AdnanNovations</strong><br>
+  Email: <a href="mailto:adnannovations@gmail.com">adnannovations@gmail.com</a>
+</p>
+
+<footer>
+  Kebijakan Privasi Cashier Mart &middot; Berlaku sejak 27 Juli 2026<br>
+  Dokumen ini berlaku untuk aplikasi dengan nama paket <code>com.cashiermart.app</code>
+  yang didistribusikan melalui Google Play Store.
+</footer>
+
+</body>
+</html>
